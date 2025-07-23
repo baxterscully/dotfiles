@@ -13,7 +13,7 @@ end
 local function syntensor()
   require('telescope.builtin').find_files({
     prompt_title = "< Syntensor Projects >",
-    cwd = "~/syntensor",
+    cwd = "~/syntensor/dev/",
     hidden = true,
   })
   require('neo-tree.command').execute({
