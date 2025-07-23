@@ -3,7 +3,7 @@
 
 * {
   font-family: "UbuntuMono Nerd Font";
-  font-size: 13px;
+  font-size: 16px;
   min-height: 0;
 }
 
@@ -13,6 +13,7 @@ window#waybar {
   transition-property: background-color;
   transition-duration: 0.5s;
   border-bottom: 2px solid @surface0;
+  border-radius: 15px;
 }
 
 window#waybar.hidden {
@@ -42,10 +43,10 @@ window#waybar.hidden {
   font-weight: bold;
 }
 
-#workspaces button:hover {
-  background: @surface1;
-  color: @text;
-}
+/* #workspaces button:hover { */
+/*   background: @surface1; */
+/*   color: @text; */
+/* } */
 
 #workspaces button.urgent {
   background: @red;
@@ -113,8 +114,9 @@ window#waybar.hidden {
 
 #battery {
   background: @surface0;
-  margin: 5px 0px;
+  margin: 5px 5px 5px 0px;
   padding: 2px 10px;
+  border-radius: 0px 15px 15px 0px;
   color: @green;
   font-weight: bold;
 }

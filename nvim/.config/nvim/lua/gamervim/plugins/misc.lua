@@ -1,17 +1,24 @@
 return {
     {
+        "tpope/vim-surround", -- Surround text
+        "tpope/vim-sleuth", -- auto indent
+        "tpope/vim-commentary", -- comments
+        "christoomey/vim-tmux-navigator",
+        "mbbill/undotree"
+    },
+    {
         -- autopairs
         "windwp/nvim-autopairs",
         event = "InsertEnter",
         config = true,
 
     },
-    {
-        "tpope/vim-surround", -- Surround text
-        "tpope/vim-sleuth", -- auto indent
-        "tpope/vim-commentary", -- comments
-        "norcalli/nvim-colorizer.lua",
-        "christoomey/vim-tmux-navigator",
+    { -- ssh client
+        'baxterscully/distant.nvim',
+        branch = 'v0.3',
+        config = function()
+            require('distant'):setup()
+        end
     },
     {
         "kmontocam/nvim-conda", -- anaconda shit
@@ -119,19 +126,28 @@ return {
             },
         },
     },
-    -- {
-    --     "ThePrimeagen/refactoring.nvim",
-    --     dependencies = {
-    --         "nvim-lua/plenary.nvim",
-    --         "nvim-treesitter/nvim-treesitter",
-    --     },
-    --     config = function ()
-    --         require("refactoring").setup()
-    --         vim.keymap.set(vim.keymap.set(
-    --             {"n", "x"},
-    --             "<leader>rr",
-    --             function() require('refactoring').select_refactor() end
-    --         ))
-    --     end
-    -- },
+
+    -- show colors for hex strings, rgb, etc.
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = function ()
+            require("colorizer").setup({
+                "css",
+                "javascript",
+                "typescript",
+                "python",
+                "html",
+            })
+        end
+    },
+    {
+        "f-person/git-blame.nvim",
+        event = "VeryLazy",
+        opts = {
+            enabled = true,
+            message_template = " <author> • <date> • <<sha>>",
+            date_format = "%m-%d-%Y %H:%M:%S",
+            virtual_text_column = 1,
+        }
+    },
 }

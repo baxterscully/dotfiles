@@ -5,25 +5,14 @@ return {
         lazy = true,
         config = false,
     },
+    -- {
+    --     'github/copilot.vim',
+    -- },
     {
         'williamboman/mason.nvim',
         lazy = false,
         config = true,
     },
-    {
-        "nvimtools/none-ls.nvim",
-        ft = {"python"},
-        config = function ()
-            local null_ls = require('null_ls')
-            null_ls.setup({
-                sources = {
-                    null_ls.builtin.diagnostics.mypy,
-                    null_ls.builtin.diagnostics.ruff,
-                }
-            })
-        end
-    },
-
     -- Autocompletion
     {
         'hrsh7th/nvim-cmp',
@@ -43,6 +32,7 @@ return {
                 sources = {
                     {name = 'nvim_lsp'},
                     {name = 'luasnip'},
+                    {name = 'emoji'},
                     {
                         {name = 'buffer'},
                     },

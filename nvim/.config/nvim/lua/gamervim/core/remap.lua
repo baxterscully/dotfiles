@@ -1,7 +1,17 @@
 vim.g.mapleader = " "
 local opts = {noremap = "true", silent=true}
 
+-- Copilot --
+-- vim.keymap.set("i", "<C-Space>", 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false })
+-- vim.keymap.set("n", "<leader>cd", ':Copilot disable<CR>')
+-- vim.keymap.set("n", "<leader>ce", ':Copilot enable<CR>')
+
+vim.g.copilot_no_tab_map = true
+
 vim.keymap.set("n", "<C-c>", "<ESC>")
+
+-- Increment and Decrement
+vim.keymap.set("n", "<C-i>", "<C-a>")
 
 -- Clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
@@ -31,6 +41,7 @@ vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<CR>', { silent = true })
 vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<CR>', { silent = true })
 
 vim.keymap.set({ "n", "x" }, 'x', '"_x', opts)
+vim.keymap.set({ "n", "x" }, 'c', '"_c', opts)
 
 -- Find and center
 vim.keymap.set('n', 'n', 'nzzzv', opts)
@@ -63,3 +74,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- lazydocker
 vim.keymap.set("n", "<leader>ld", "<cmd>LazyDocker<CR>", { desc = "Toggle LazyDocker", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ut", "<cmd>UndotreeToggle<CR>", { desc = "Toggle UndoTree", noremap = true, silent = true })
+
+

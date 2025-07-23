@@ -49,7 +49,7 @@ local config = {
     --  },
     --},
     indent = {
-      indent_size = 2,
+      indent_size = 1,
       padding = 1,
       -- indent guides
       with_markers = true,
@@ -115,11 +115,11 @@ local config = {
     -- If you don't want to use these columns, you can set `enabled = false` for each of them individually
     file_size = {
       enabled = true,
-      required_width = 64, -- min width of window required to show this column
+      required_width = 32, -- min width of window required to show this column
     },
     type = {
       enabled = true,
-      required_width = 110, -- min width of window required to show this column
+      required_width = 64, -- min width of window required to show this column
     },
     last_modified = {
       enabled = true,
@@ -337,7 +337,7 @@ local config = {
     --         The first field in each component is the name of the function to call.
     --         The rest of the fields are passed to the function as the "config" argument.
     filtered_items = {
-      visible = false, -- when true, they will just be displayed differently than normal items
+      visible = true, -- when true, they will just be displayed differently than normal items
       force_visible_in_empty_folder = true, -- when true, hidden files will be shown if the root folder is otherwise empty
       show_hidden_count = true, -- when true, the number of hidden items in each folder will be shown as the last entry
       hide_dotfiles = true,
