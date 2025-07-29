@@ -3,10 +3,10 @@
     "position": "top",
     "height": 40,
     "spacing": 4,
-    "margin-top": 5,
-    "margin-left": 5,
-    "margin-right": 5,
-    "margin-bottom": 5,
+    // "margin-top": 5,
+    // "margin-left": 5,
+    // "margin-right": 5,
+    // "margin-bottom": 5,
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window"
@@ -46,7 +46,7 @@
     "hyprland/window": {
         "format": "{}",
         "separate-outputs": true,
-        "max-length": 50
+        "max-length": 30,
     },
 
     "clock": {

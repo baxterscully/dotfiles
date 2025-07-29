@@ -8,11 +8,10 @@
 }
 
 window#waybar {
-  background: @base;
+  background: rgba(30, 30, 46, 0.0); /* catppuccin mocha base with opacity */
   color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
-  /* border-bottom: 2px solid @surface0; */
   border-radius: 5px;
 }
 
