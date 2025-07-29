@@ -101,7 +101,7 @@ return {
                     filter = { event = "notify" },
                     view = "mini",
                 },
-                {
+                { -- Dont show messages on bottom
                     filter = {
                         event = "msg_showmode",
                     },

@@ -3,9 +3,9 @@
 format = """
 $username\
 $directory\
+$fill\
 $git_branch\
 $git_status\
-$fill\
 $c\
 $rust\
 $golang\
@@ -18,7 +18,9 @@ $python\
 $conda\
 $lua\
 $docker_context\
-$line_break$character"""
+$line_break\
+$character
+"""
 
 palette = 'catppuccin_mocha'
 
@@ -56,26 +58,26 @@ crust = "#11111b"
 disabled = false
 style = "fg:text"
 
-[os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = ""
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
+# [os.symbols]
+# Windows = "󰍲"
+# Ubuntu = "󰕈"
+# SUSE = ""
+# Raspbian = "󰐿"
+# Mint = "󰣭"
+# Macos = ""
+# Manjaro = ""
+# Linux = "󰌽"
+# Gentoo = "󰣨"
+# Fedora = "󰣛"
+# Alpine = ""
+# Amazon = ""
+# Android = ""
+# Arch = "󰣇"
+# Artix = "󰣇"
+# CentOS = ""
+# Debian = "󰣚"
+# Redhat = "󱄛"
+# RedHatEnterprise = "󱄛"
 
 # Username Module
 [username]
@@ -94,7 +96,7 @@ disabled = false
 # Directory Module
 [directory]
 style = "bold fg:blue"
-format = "[ $path ]($style)"
+format = "[$path]($style)"
 truncation_length = 3
 truncation_symbol = "  "
 

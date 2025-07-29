@@ -12,7 +12,12 @@ return {
         
         local standard_setup = {
             -- borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-            borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+            -- borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+            -- borderchars = { "━", "┃", "━", "┃", "┏", "┓", "┛", "┗" }, -- thick lines
+            -- borderchars = { "═", "║", "═", "║", "╔", "╗", "╝", "╚" }, -- double lines
+            -- borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+            borderchars = { "─", "│", "─", "│", "╭",  "╮", "╯", "╰"},
+
             preview = { hide_on_startup = true },
             layout_strategy = 'vertical',
             layout_config = {
@@ -33,7 +38,14 @@ return {
         
         local fullscreen_setup = {
             -- borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-            borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+            -- borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+            -- Alternative border styles you can try:
+            -- borderchars = { "━", "┃", "━", "┃", "┏", "┓", "┛", "┗" }, -- thick lines
+            -- borderchars = { "═", "║", "═", "║", "╔", "╗", "╝", "╚" }, -- double lines
+            -- borderchars = { "-", "|", "-", "|", "+", "+", "+", "+" }, -- simple ASCII
+            -- borderchars = { " ", " ", " ", " ", " ", " ", " ", " " },
+            borderchars = { "─", "│", "─", "│", "╭",  "╮", "╯", "╰"},
+
             preview = { hide_on_startup = false },
             layout_strategy = 'flex',
             layout_config = {
@@ -181,7 +193,7 @@ return {
         vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = "Telescope Builtins" })
         
         vim.keymap.set('n', '<leader>lr', builtin.lsp_references, { desc = "LSP References" })
-        vim.keymap.set('n', '<leader>ld', builtin.lsp_definitions, { desc = "LSP Definitions" })
+        -- vim.keymap.set('n', '<leader>ld', builtin.lsp_definitions, { desc = "LSP Definitions" }) conflict with lazydocker
         vim.keymap.set('n', '<leader>li', builtin.lsp_implementations, { desc = "LSP Implementations" })
         vim.keymap.set('n', '<leader>ls', builtin.lsp_document_symbols, { desc = "Document Symbols" })
         vim.keymap.set('n', '<leader>lS', builtin.lsp_workspace_symbols, { desc = "Workspace Symbols" })
@@ -189,8 +201,8 @@ return {
         vim.keymap.set('n', '<leader>:', builtin.command_history, { desc = "Command History" })
         vim.keymap.set('n', '<leader>m', builtin.marks, { desc = "Marks" })
         
-        vim.keymap.set('n', '<leader>fc', function()
-            builtin.find_files({ cwd = vim.fn.stdpath("config") })
-        end, { desc = "Find Config Files" })
+        -- vim.keymap.set('n', '<leader>fc', function()
+        --     builtin.find_files({ cwd = vim.fn.stdpath("config") })
+        -- end, { desc = "Find Config Files" })
     end
 }
