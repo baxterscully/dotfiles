@@ -12,7 +12,7 @@ window#waybar {
   color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
-  border-radius: 5px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 window#waybar.hidden {

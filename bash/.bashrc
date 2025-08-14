@@ -27,6 +27,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vim='nvim'
 
+# So conda ncurses doesn't override clear
+alias clear="/usr/bin/clear"
+
 # PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
